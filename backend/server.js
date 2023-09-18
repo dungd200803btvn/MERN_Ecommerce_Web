@@ -15,7 +15,7 @@ process.on("uncaughtException", (err) => {
 
 dotenv.config({path: "backend/config/config.env"});
 connectDatabase();
-app.listen(process.env.PORT,()=>{
+app.listen(4000,()=>{
     console.log(`Server is working on http://localhost:${process.env.PORT}`);
 });
 
