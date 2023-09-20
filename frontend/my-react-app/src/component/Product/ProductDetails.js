@@ -8,6 +8,7 @@ import Loader from "../layout/Loader/Loader";
 
 import { Rating } from "@material-ui/lab";
 import ReviewCard from "./ReviewCard";
+import MetaData from "../layout/MetaData";
 const ProductDetails = ({ match })=>{
 const dispatch = useDispatch();
 //const alert = useAlert();
@@ -68,6 +69,7 @@ useEffect(() => {
         <Fragment>
     {
         loading? <Loader/>: (<Fragment>
+          <MetaData title={`${product.name}-- ECOMMERCE`} />
             <div className="ProductDetails">
                         <div>
                         <Carousel>
@@ -98,7 +100,7 @@ useEffect(() => {
                             </div>
 
                             <div className="detailsBlock-3">
-                                    <h1>{`₹${product.price}`}</h1>
+                                    <h1>{`${product.price}USD`}</h1>
                                     <div className="detailsBlock-3-1">
                                     <div className="detailsBlock-3-1-1">
                                         <button >-</button>
